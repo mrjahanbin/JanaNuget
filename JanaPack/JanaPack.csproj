@@ -5,7 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<VersionPrefix>0.0.1</VersionPrefix>
+		<VersionPrefix>0.0.2</VersionPrefix>
 		<PackageProjectUrl>https://github.com/mrjahanbin/JanaNuget.git</PackageProjectUrl>
 		<PackageIcon>JanaPack.jpg</PackageIcon>
 		<RepositoryUrl>https://github.com/mrjahanbin/JanaNuget.git</RepositoryUrl>

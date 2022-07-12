@@ -32,7 +32,7 @@ namespace JanaPackTest
             DateTime Expected = new(1, 1, 1);
 
             //act
-            var Act = Input.Fix().ToMiladiDate();
+            var Act = Fixer.Fix(Input).ToMiladiDate();
 
             //assert
             Assert.Equal(Expected, Act);
