@@ -32,7 +32,6 @@ namespace JanaPackTest
             //arrange
             var Expected = "  ";
 
-
             //act
             var Act = Input.Fix();
 
@@ -50,7 +49,6 @@ namespace JanaPackTest
             //arrange
             var Expected = "Jana";
 
-
             //act
             var Act = Input.Fix();
 
@@ -64,7 +62,6 @@ namespace JanaPackTest
         {
             //arrange
             var Expected = "J a n a";
-
 
             //act
             var Act = Input.Fix();
@@ -84,16 +81,13 @@ namespace JanaPackTest
             //arrange
             var Expected = "جانا";
 
-
             //act
             var Act = Input.Fix();
 
             //assert
             Assert.Equal(Expected, Act);
         }
-
         #endregion
-
 
     }
 }

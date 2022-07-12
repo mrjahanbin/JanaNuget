@@ -2,14 +2,8 @@
 
 namespace JanaPackTest
 {
-
-
-
     /*
-     میخوایم تست کنیم ببینیم تاریخ فارسی رو چطوری به میلادی تبدیل کنیم
-    پس ما یک تاریخ بهش پاس میدیم
-    1- ممکنه تاریخ نال بهش پاس بدیم پس جلوش باید گرفته بشه
-     
+     * میخوایم تست کنیم ببینیم تاریخ فارسی رو چطوری به میلادی تبدیل کنیم   
      */
     public class PersianDatetimeTest
     {
@@ -32,13 +26,10 @@ namespace JanaPackTest
         [InlineData("         12213214            ")]
         [InlineData("kjhkj         jhgjhgjhg")]
         [InlineData("1765,76,57         2164352176")]
-
-
         public void Value_Not_Correct(string Input)
         {
             //arrange
             DateTime Expected = new(1, 1, 1);
-
 
             //act
             var Act = Input.Fix().ToMiladiDate();
