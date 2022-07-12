@@ -5,7 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<VersionPrefix>0.0.2</VersionPrefix>
+		<VersionPrefix>0.0.3</VersionPrefix>
 		<PackageProjectUrl>https://github.com/mrjahanbin/JanaNuget.git</PackageProjectUrl>
 		<PackageIcon>icon.png</PackageIcon>
 		<RepositoryUrl>https://github.com/mrjahanbin/JanaNuget.git</RepositoryUrl>
@@ -14,7 +14,7 @@
 		<Title>Jana Pack</Title>
 		<Copyright>MrJahanbin</Copyright>
 		<RepositoryType>git</RepositoryType>
-		<PackageReleaseNotes>String Fixer and Persian to Miladi Date Convertor</PackageReleaseNotes>
+		<PackageReleaseNotes>Add Miladi(Gregorian) to Shamsi(Persian) Date Convertor</PackageReleaseNotes>
 		<Description>Library of important functions</Description>
 	</PropertyGroup>
 
