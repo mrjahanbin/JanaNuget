@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JanaPack", "JanaPack\JanaPack.csproj", "{EC2C0ACF-2A9E-473E-91DD-FF54A9119963}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JanaPackTest", "JanaPackTest\JanaPackTest.csproj", "{C3D64D3B-DFBA-4C00-BD1C-7B69794FEA85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC2C0ACF-2A9E-473E-91DD-FF54A9119963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC2C0ACF-2A9E-473E-91DD-FF54A9119963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC2C0ACF-2A9E-473E-91DD-FF54A9119963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC2C0ACF-2A9E-473E-91DD-FF54A9119963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3D64D3B-DFBA-4C00-BD1C-7B69794FEA85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3D64D3B-DFBA-4C00-BD1C-7B69794FEA85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3D64D3B-DFBA-4C00-BD1C-7B69794FEA85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3D64D3B-DFBA-4C00-BD1C-7B69794FEA85}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD9111F3-F37C-4205-A6C7-4F6F9538E5BA}
+	EndGlobalSection
+EndGlobal
