@@ -6,7 +6,7 @@ namespace JanaPack
     public static class Fixer
     {
 
-        public static string Fix(this string text)
+        public static string Fix(string text)
         {
             if (string.IsNullOrWhiteSpace(text))
             {

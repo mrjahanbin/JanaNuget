@@ -33,7 +33,7 @@ namespace JanaPackTest
             var Expected = "  ";
 
             //act
-            var Act = Input.Fix();
+            var Act = Fixer.Fix(Input);
 
             //assert
             Assert.DoesNotContain(Expected, Act);
@@ -50,7 +50,7 @@ namespace JanaPackTest
             var Expected = "Jana";
 
             //act
-            var Act = Input.Fix();
+            var Act = Fixer.Fix(Input);
 
             //assert
             Assert.Equal(Expected, Act);
@@ -64,7 +64,7 @@ namespace JanaPackTest
             var Expected = "J a n a";
 
             //act
-            var Act = Input.Fix();
+            var Act = Fixer.Fix(Input);
 
             //assert
             Assert.Equal(Expected, Act);
@@ -82,7 +82,7 @@ namespace JanaPackTest
             var Expected = "جانا";
 
             //act
-            var Act = Input.Fix();
+            var Act = Fixer.Fix(Input);
 
             //assert
             Assert.Equal(Expected, Act);
