@@ -1,11 +1,12 @@
 ﻿using JanaPack;
+using System.Globalization;
 
 namespace JanaPackTest
 {
     /*
      * میخوایم تست کنیم ببینیم تاریخ فارسی رو چطوری به میلادی تبدیل کنیم   
      */
-    public class PersianDatetimeTest
+    public class ToMiladiTest
     {
         #region ToMiladiDate
         [Theory]
@@ -84,6 +85,7 @@ namespace JanaPackTest
 
         [Theory]
         [InlineData("68,9,11")]
+        [InlineData("1399,12,30")]
         [InlineData("68,9,1")]
         public void Value_Correct4(string Input)
         {
@@ -97,7 +99,5 @@ namespace JanaPackTest
             Assert.NotEqual(Expected, Act);
         }
         #endregion
-
-
     }
 }

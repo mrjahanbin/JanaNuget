@@ -1,7 +1,4 @@
-﻿using System.Globalization;
-using System.Text.RegularExpressions;
-
-namespace JanaPack
+﻿namespace JanaPack
 {
     public static class Fixer
     {

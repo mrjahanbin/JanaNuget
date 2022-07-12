@@ -7,7 +7,7 @@
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<VersionPrefix>0.0.2</VersionPrefix>
 		<PackageProjectUrl>https://github.com/mrjahanbin/JanaNuget.git</PackageProjectUrl>
-		<PackageIcon>JanaPack.jpg</PackageIcon>
+		<PackageIcon>icon.png</PackageIcon>
 		<RepositoryUrl>https://github.com/mrjahanbin/JanaNuget.git</RepositoryUrl>
 		<PackageTags>JanaPack,Mrjahanbin,StringFixer,PersianDateToMiladi,MiladiToPersianDate</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -19,7 +19,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Include="..\..\..\..\Downloads\Video\JanaPack.jpg">
+	  <None Update="icon.png">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
