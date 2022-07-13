@@ -5,7 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<VersionPrefix>0.0.3</VersionPrefix>
+		<VersionPrefix>0.0.4</VersionPrefix>
 		<PackageProjectUrl>https://github.com/mrjahanbin/JanaNuget.git</PackageProjectUrl>
 		<PackageIcon>icon.png</PackageIcon>
 		<RepositoryUrl>https://github.com/mrjahanbin/JanaNuget.git</RepositoryUrl>
@@ -14,7 +14,14 @@
 		<Title>Jana Pack</Title>
 		<Copyright>MrJahanbin</Copyright>
 		<RepositoryType>git</RepositoryType>
-		<PackageReleaseNotes>Add Miladi(Gregorian) to Shamsi(Persian) Date Convertor</PackageReleaseNotes>
+		<PackageReleaseNotes>
+			Add
+			ToShamsiDatetime(),
+			ToMiladiDatetime(),
+			ToPercent(),
+			ToCurrency(),
+			ToMiladiYear()
+		</PackageReleaseNotes>
 		<Description>Library of important functions</Description>
 	</PropertyGroup>
 
