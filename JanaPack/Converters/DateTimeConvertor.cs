@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace JanaPack
+namespace JanaPack.Converters
 {
     public static class DateTimeConvertor
     {
@@ -19,10 +19,10 @@ namespace JanaPack
             {
                 return new();
             }
-            var IsLetterOrDigit = value.All(Char.IsLetterOrDigit);
-            var IsSymbol = value.All(Char.IsSymbol);
+            var IsLetterOrDigit = value.All(char.IsLetterOrDigit);
+            var IsSymbol = value.All(char.IsSymbol);
             //var IsHighSurrogate = value.All(Char.IsHighSurrogate);
-            var IsPunctuation = value.All(Char.IsPunctuation);
+            var IsPunctuation = value.All(char.IsPunctuation);
             //var IsSeparator = value.All(Char.IsSeparator);
             //var IsSurrogate = value.All(Char.IsSurrogate);
             var IsWhiteSpace = value.Contains(" ");
@@ -58,10 +58,10 @@ namespace JanaPack
             {
                 return "";
             }
-            var IsLetterOrDigit = value.All(Char.IsLetterOrDigit);
-            var IsSymbol = value.All(Char.IsSymbol);
+            var IsLetterOrDigit = value.All(char.IsLetterOrDigit);
+            var IsSymbol = value.All(char.IsSymbol);
             //var IsHighSurrogate = value.All(Char.IsHighSurrogate);
-            var IsPunctuation = value.All(Char.IsPunctuation);
+            var IsPunctuation = value.All(char.IsPunctuation);
             //var IsSeparator = value.All(Char.IsSeparator);
             //var IsSurrogate = value.All(Char.IsSurrogate);
             var IsWhiteSpace = value.Contains(" ");
