@@ -1,7 +1,7 @@
 ﻿using JanaPack.Converters;
 using System.Globalization;
 
-namespace JanaPackTest.Converters
+namespace JanaPackTest.Converters.DateTimes
 {
     /*
      * میخوایم تست کنیم ببینیم تاریخ فارسی رو چطوری به میلادی تبدیل کنیم   
