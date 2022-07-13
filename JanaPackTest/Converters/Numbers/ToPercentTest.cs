@@ -1,7 +1,7 @@
 ﻿using JanaPack.Converters;
 using System.Globalization;
 
-namespace JanaPackTest.Converters
+namespace JanaPackTest.Converters.Numbers
 {
     /*
      * میخوایم تست کنیم ببینیم تاریخ فارسی رو چطوری به میلادی تبدیل کنیم   
@@ -20,6 +20,19 @@ namespace JanaPackTest.Converters
 
             //assert
             Assert.Equal(622, Act);
+
+        }
+        
+        [Fact]
+        public void Value_Correct5()
+        {
+            //arrange
+            decimal Input = 99999999999.99999999999999999M;
+            //act
+            var Act = Input.ToPercent();
+
+            //assert
+            Assert.Equal(99999999999.9999M, Act);
 
         }
 
