@@ -67,5 +67,27 @@ namespace JanaPack
             var Result = pc.GetYear(value) + "/" + pc.GetMonth(value).ToString("00") + "/" + pc.GetDayOfMonth(value).ToString("00");
             return Result;
         }
+        
+        public static string ToShamsiYear(this DateTime value)
+        {
+
+            if (value.Year < 622)
+            {
+                return "";
+            }
+            if (value.Year < 622 && value.Month < 3)
+            {
+                return "";
+            }
+            if (value.Year < 622 && value.Month < 3 && value.Day < 22)
+            {
+                return "";
+            }
+
+            PersianCalendar pc = new();
+            var Result = pc.GetYear(value).ToString();
+            return Result;
+        }
+
     }
 }
