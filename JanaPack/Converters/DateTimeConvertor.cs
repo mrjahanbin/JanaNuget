@@ -190,7 +190,7 @@ namespace JanaPack.Converters
             var Result = $"{pc.GetYear(value)}/{pc.GetMonth(value):00}/{pc.GetDayOfMonth(value):00}";
             return Result;
         }
-        public static string ToShamsiTime(this DateTime value)
+        public static string ToShamsiDatetime(this DateTime value)
         {
             if (value.Year < 622)
             {
