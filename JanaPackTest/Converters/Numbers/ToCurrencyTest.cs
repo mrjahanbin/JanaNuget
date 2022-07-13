@@ -1,5 +1,4 @@
 ﻿using JanaPack.Converters;
-using System.Globalization;
 
 namespace JanaPackTest.Converters.Numbers
 {
@@ -37,7 +36,7 @@ namespace JanaPackTest.Converters.Numbers
 
         }
 
-        
+
         [Theory]
         [InlineData(622)]
         public void Int_Value_Empty_ToCurrency(decimal Input)
@@ -65,7 +64,7 @@ namespace JanaPackTest.Converters.Numbers
 
         }
 
-        
+
         [Theory]
         [InlineData(0, "#,#.00")]
         public void Value_Zero_Correct(decimal Input, string Format)
@@ -92,7 +91,7 @@ namespace JanaPackTest.Converters.Numbers
             Assert.Equal("", Act);
 
         }
-        
+
 
 
         [Theory]

@@ -1,5 +1,4 @@
 ﻿using System.Globalization;
-using System.Text.RegularExpressions;
 
 namespace JanaPack.Converters
 {
@@ -25,7 +24,7 @@ namespace JanaPack.Converters
                     return "";
                 }
                 var result = string.Empty;
-                if (value.ToString().Contains("."))
+                if (value.ToString().Contains('.'))
                 {
                     var FormatSplit = Format.Split(".");
                     int Pointcount = 0;
@@ -64,7 +63,7 @@ namespace JanaPack.Converters
 
 
 
-                if (!result.All(Char.IsNumber) && !(result.Contains(",") || result.Contains(".")))
+                if (!result.All(Char.IsNumber) && !(result.Contains(',') || result.Contains('.')))
                 {
                     return "";
                 }
@@ -78,7 +77,7 @@ namespace JanaPack.Converters
                 }
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 return "";

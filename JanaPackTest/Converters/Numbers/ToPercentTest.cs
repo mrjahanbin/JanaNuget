@@ -1,5 +1,4 @@
 ﻿using JanaPack.Converters;
-using System.Globalization;
 
 namespace JanaPackTest.Converters.Numbers
 {
@@ -22,7 +21,7 @@ namespace JanaPackTest.Converters.Numbers
             Assert.Equal(622, Act);
 
         }
-        
+
         [Fact]
         public void Value_Correct5()
         {

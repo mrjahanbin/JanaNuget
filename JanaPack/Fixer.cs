@@ -7,7 +7,7 @@
         {
             if (string.IsNullOrWhiteSpace(text))
             {
-                return null;
+                return "";
             }
 
             text =
