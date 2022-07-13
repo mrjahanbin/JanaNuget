@@ -36,8 +36,8 @@ namespace JanaPackTest.Converters.Numbers
             Assert.Equal("622", Act);
 
         }
-        
 
+        
         [Theory]
         [InlineData(622)]
         public void Int_Value_Empty_ToCurrency(decimal Input)
