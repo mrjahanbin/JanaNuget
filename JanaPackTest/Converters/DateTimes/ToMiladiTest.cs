@@ -126,7 +126,7 @@ namespace JanaPackTest.Converters.DateTimes
             DateTime Expected = new(1, 1, 1, 0, 0, 0);
 
             //act
-            var Act = Input.ToMiladiDatetime();
+            var Act = Input.ToMiladiDateTime();
 
             //assert
             Assert.Equal(Expected.Date, Act.Date);
@@ -148,7 +148,7 @@ namespace JanaPackTest.Converters.DateTimes
             DateTime Expected = new(1989, 12, 02);
 
             //act
-            var Act = Input.ToMiladiDatetime();
+            var Act = Input.ToMiladiDateTime();
 
             //assert
             Assert.Equal(Expected, Act);
@@ -167,7 +167,7 @@ namespace JanaPackTest.Converters.DateTimes
             DateTime Expected = new(1989, 12, 02, 08, 37, 15);
 
             //act
-            var Act = Input.ToMiladiDatetime();
+            var Act = Input.ToMiladiDateTime();
 
             //assert
             Assert.Equal(Expected.Date, Act.Date);
@@ -189,7 +189,7 @@ namespace JanaPackTest.Converters.DateTimes
             DateTime Expected = new(9989, 11, 28, 0, 0, 0);
 
             //act
-            var Act = Input.ToMiladiDatetime();
+            var Act = Input.ToMiladiDateTime();
 
             //assert
             Assert.Equal(Expected.Date, Act.Date);
@@ -210,7 +210,7 @@ namespace JanaPackTest.Converters.DateTimes
             DateTime Expected = new(1, 1, 1, 11, 31, 16);
 
             //act
-            var Act = Input.ToMiladiDatetime();
+            var Act = Input.ToMiladiDateTime();
 
             //assert
             Assert.Equal(Expected.Date, Act.Date);
@@ -229,7 +229,7 @@ namespace JanaPackTest.Converters.DateTimes
             DateTime Expected = new(1, 1, 1, 0, 0, 0);
 
             //act
-            var Act = Input.ToMiladiDatetime();
+            var Act = Input.ToMiladiDateTime();
 
             //assert
             Assert.Equal(Expected.Date, Act.Date);
@@ -247,7 +247,7 @@ namespace JanaPackTest.Converters.DateTimes
             DateTime Expected = new(1, 1, 1, 11, 31, 0);
 
             //act
-            var Act = Input.ToMiladiDatetime();
+            var Act = Input.ToMiladiDateTime();
 
             //assert
             Assert.Equal(Expected.Date, Act.Date);
@@ -264,7 +264,7 @@ namespace JanaPackTest.Converters.DateTimes
             DateTime Expected = new(2023, 03, 11, 11, 31, 16);
 
             //act
-            var Act = Input.ToMiladiDatetime();
+            var Act = Input.ToMiladiDateTime();
 
             //assert
             Assert.Equal(Expected.Date, Act.Date);
@@ -281,7 +281,7 @@ namespace JanaPackTest.Converters.DateTimes
             DateTime Expected = new(622, 03, 22, 12, 0, 0);
 
             //act
-            var Act = Input.ToMiladiDatetime();
+            var Act = Input.ToMiladiDateTime();
 
             //assert
             Assert.Equal(Expected.Date, Act.Date);
@@ -298,7 +298,7 @@ namespace JanaPackTest.Converters.DateTimes
             DateTime Expected = new(622, 03, 22, 12, 0, 0);
 
             //act
-            var Act = Input.ToMiladiDatetime();
+            var Act = Input.ToMiladiDateTime();
 
             //assert
             Assert.Equal(Expected.Date, Act.Date);
@@ -315,7 +315,7 @@ namespace JanaPackTest.Converters.DateTimes
             DateTime Expected = new(622, 03, 22, 22, 0, 0);
 
             //act
-            var Act = Input.ToMiladiDatetime();
+            var Act = Input.ToMiladiDateTime();
 
             //assert
             Assert.Equal(Expected.Date, Act.Date);
@@ -332,7 +332,7 @@ namespace JanaPackTest.Converters.DateTimes
             DateTime Expected = new(789, 12, 02);
 
             //act
-            var Act = Input.ToMiladiDatetime();
+            var Act = Input.ToMiladiDateTime();
 
             //assert
             Assert.Equal(Expected, Act);
@@ -346,7 +346,7 @@ namespace JanaPackTest.Converters.DateTimes
             DateTime Expected = new(622, 3, 22);
 
             //act
-            var Act = Input.ToMiladiDatetime();
+            var Act = Input.ToMiladiDateTime();
 
             //assert
             Assert.Equal(Expected, Act);
@@ -362,7 +362,7 @@ namespace JanaPackTest.Converters.DateTimes
             DateTime Expected = new(1, 1, 1);
 
             //act
-            var Act = Input.ToMiladiDatetime();
+            var Act = Input.ToMiladiDateTime();
 
             //assert
             Assert.NotEqual(Expected, Act);

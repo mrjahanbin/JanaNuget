@@ -59,7 +59,7 @@ namespace JanaPack.Converters
             var Result = new DateTime(datePart[0], datePart[1], datePart[2], pc);
             return Result;
         }
-        public static DateTime ToMiladiDatetime(this string value)
+        public static DateTime ToMiladiDateTime(this string value)
         {
             DateTime DateOnly = new();
             List<int>? TimeOnly = null;
@@ -193,7 +193,7 @@ namespace JanaPack.Converters
             var Result = $"{pc.GetYear(value)}/{pc.GetMonth(value):00}/{pc.GetDayOfMonth(value):00}";
             return Result;
         }
-        public static string ToShamsiDatetime(this DateTime value)
+        public static string ToShamsiDateTime(this DateTime value)
         {
             if (value.Year < 622)
             {

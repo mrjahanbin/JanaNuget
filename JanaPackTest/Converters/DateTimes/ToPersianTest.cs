@@ -107,7 +107,7 @@ namespace JanaPackTest.Converters.DateTimes
             DateTime? Input = new DateTime(Year, Month, Day, new GregorianCalendar());
 
             //act
-            var Act = Input.GetValueOrDefault().ToShamsiDatetime();
+            var Act = Input.GetValueOrDefault().ToShamsiDateTime();
 
             //assert
             Assert.Equal("1/01/01 0:0:0", Act);
@@ -124,7 +124,7 @@ namespace JanaPackTest.Converters.DateTimes
             DateTime? Input = new DateTime(Year, Month, Day, new GregorianCalendar());
 
             //act
-            var Act = Input.GetValueOrDefault().ToShamsiDatetime();
+            var Act = Input.GetValueOrDefault().ToShamsiDateTime();
 
             //assert
             Assert.NotEqual("", Act);
@@ -141,7 +141,7 @@ namespace JanaPackTest.Converters.DateTimes
             DateTime? Input = new DateTime(Year, Month, Day, new GregorianCalendar());
 
             //act
-            var Act = Input.GetValueOrDefault().ToShamsiDatetime();
+            var Act = Input.GetValueOrDefault().ToShamsiDateTime();
 
             //assert
             Assert.Equal("", Act);
@@ -177,7 +177,7 @@ namespace JanaPackTest.Converters.DateTimes
             DateTime? Input = null;
 
             //act
-            var Act = Input.GetValueOrDefault().ToShamsiDatetime();
+            var Act = Input.GetValueOrDefault().ToShamsiDateTime();
 
             //assert
             Assert.Equal("", Act);

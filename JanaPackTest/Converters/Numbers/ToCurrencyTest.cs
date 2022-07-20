@@ -254,6 +254,52 @@ namespace JanaPackTest.Converters.Numbers
             //assert
             Assert.Equal("", Act);
         }
+        
+        [Theory]
+        [InlineData(622.22, "kjhkjh")]
+        [InlineData(622.22, "*&^*&^*&")]
+        [InlineData(622.22, "98767687")]
+        [InlineData(622.22, " 997987 ")]
+        [InlineData(622.22, " 997987             ")]
+        [InlineData(622.22, "            997987 ")]
+        [InlineData(622.22, "            9979        87     ")]
+        [InlineData(622.22, "            (*&(        (*&(     ")]
+        [InlineData(622.22, "            hkjl       kjh     ")]
+        [InlineData(622.22, "            hkjl       (*&   98789     ")]
+        [InlineData(622.22, "            hkjl       (*&        ")]
+        public void Value_Not_Correct_Format2(decimal Input, string Format)
+        {
+            //arrange
+
+            //act
+            var Act = Input.ToCurrency(Format);
+
+            //assert
+            Assert.Equal("", Act);
+        }
+        
+        [Theory]
+        [InlineData(622.66, "kjhkjh")]
+        [InlineData(622.66, "*&^*&^*&")]
+        [InlineData(622.66, "98767687")]
+        [InlineData(622.66, " 997987 ")]
+        [InlineData(622.66, " 997987             ")]
+        [InlineData(622.66, "            997987 ")]
+        [InlineData(622.66, "            9979        87     ")]
+        [InlineData(622.66, "            (*&(        (*&(     ")]
+        [InlineData(622.66, "            hkjl       kjh     ")]
+        [InlineData(622.66, "            hkjl       (*&   98789     ")]
+        [InlineData(622.66, "            hkjl       (*&        ")]
+        public void Value_Not_Correct_Format3(decimal Input, string Format)
+        {
+            //arrange
+
+            //act
+            var Act = Input.ToCurrency(Format);
+
+            //assert
+            Assert.Equal("", Act);
+        }
 
 
         #endregion

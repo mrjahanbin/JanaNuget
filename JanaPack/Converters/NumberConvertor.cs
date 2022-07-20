@@ -6,13 +6,41 @@ namespace JanaPack.Converters
 {
     public static class NumberConvertor
     {
-        #region Shamsi
+        #region ToPercent
         public static decimal ToPercent(this decimal value)
         {
             var decimalResult = decimal.Round(value, 4, MidpointRounding.ToZero);
             return decimalResult;
         }
+        public static decimal ToPercent(this decimal value, int? Point = 4)
+        {
+            try
+            {
+                var decimalResult = decimal.Round(value, Point.GetValueOrDefault(), MidpointRounding.ToZero);
+                return decimalResult;
+            }
+            catch (Exception)
+            {
 
+                return 0;
+            }
+        }
+        #endregion
+
+        #region ToCurrency
+        public static decimal ToDecimal(this decimal value, int? Point = 4)
+        {
+            try
+            {
+                var decimalResult = decimal.Round(value, Point.GetValueOrDefault(), MidpointRounding.ToZero);
+                return decimalResult;
+            }
+            catch (Exception)
+            {
+
+                return 0;
+            }
+        }
         public static string ToCurrency(this decimal value, string? Format = "#,0")
         {
             try
@@ -86,9 +114,10 @@ namespace JanaPack.Converters
             }
 
         }
-
-
-
         #endregion
+
+
+
+
     }
 }
