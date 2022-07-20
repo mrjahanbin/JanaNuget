@@ -12,6 +12,25 @@ namespace JanaPack.Converters
             var decimalResult = decimal.Round(value, 4, MidpointRounding.ToZero);
             return decimalResult;
         }
+
+        public static string ToPercentString(this decimal value, bool? WithSeparator = true)
+        {
+            
+            var decimalResult = decimal.Round(value, 4, MidpointRounding.ToZero);
+            string? Stringresult = "";
+            if (WithSeparator.GetValueOrDefault())
+            {
+                Stringresult = Convert.ToDecimal(decimalResult).ToString("#,#.####", CultureInfo.InvariantCulture);
+
+            }
+            else
+            {
+                Stringresult = Convert.ToDecimal(decimalResult).ToString("#.####", CultureInfo.InvariantCulture);
+
+            }
+            return Stringresult;
+
+        }
         public static decimal ToPercent(this decimal value, int? Point = 4)
         {
             try
