@@ -5,7 +5,7 @@
 		<ImplicitUsings>disable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<VersionPrefix>0.0.8</VersionPrefix>
+		<VersionPrefix>0.0.9</VersionPrefix>
 		<PackageProjectUrl>https://github.com/mrjahanbin/JanaNuget.git</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/mrjahanbin/JanaNuget.git</RepositoryUrl>
 		<PackageTags>JanaPack,Mrjahanbin,StringFixer,PersianDateToMiladi,MiladiToPersianDate</PackageTags>
@@ -14,15 +14,16 @@
 		<Copyright>MrJahanbin</Copyright>
 		<RepositoryType>git</RepositoryType>
 		<PackageReleaseNotes>
-			Add
-			ToPercent(),
-			ToDecimal(),
-			ToPercentString()
-
+			Add Icon
 		</PackageReleaseNotes>
 		<Description>Library of important functions</Description>
+		<PackageIcon>icon.png</PackageIcon>
 	</PropertyGroup>
-
+	<ItemGroup>
+		
+		<None Include="icon.png" Pack="true" PackagePath="\"/>
+		
+	</ItemGroup>
 	
 
 </Project>
