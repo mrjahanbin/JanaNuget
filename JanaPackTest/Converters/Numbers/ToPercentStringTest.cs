@@ -92,7 +92,7 @@ namespace JanaPackTest.Converters.Numbers
             var Act = Input.GetValueOrDefault().ToPercentString();
 
             //assert
-            Assert.Equal("", Act);
+            Assert.Equal("0", Act);
             Assert.DoesNotContain(".", Act.ToString());
 
         }

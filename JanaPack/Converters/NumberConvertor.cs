@@ -20,12 +20,12 @@ namespace JanaPack.Converters
             string? Stringresult = "";
             if (WithSeparator.GetValueOrDefault())
             {
-                Stringresult = Convert.ToDecimal(decimalResult).ToString("#,#.####", CultureInfo.InvariantCulture);
+                Stringresult = Convert.ToDecimal(decimalResult).ToString("#,0.####", CultureInfo.InvariantCulture);
 
             }
             else
             {
-                Stringresult = Convert.ToDecimal(decimalResult).ToString("#.####", CultureInfo.InvariantCulture);
+                Stringresult = Convert.ToDecimal(decimalResult).ToString("0.####", CultureInfo.InvariantCulture);
 
             }
             return Stringresult;
