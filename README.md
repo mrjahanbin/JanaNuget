@@ -35,5 +35,5 @@
 |                |Need|Sample|
 |----------------|-------------------------------|-----------------------------|
 |Fix|`"   12            3       " ==> "12 3"`      | value = Fixer.Fix(value);
-|Fix|`"   Jav           ad      " ==> "12 3"`      | value = Fixer.Fix(value);
+|Fix|`"   Jav           ad      " ==> "Jav ad"`      | value = Fixer.Fix(value);
 
