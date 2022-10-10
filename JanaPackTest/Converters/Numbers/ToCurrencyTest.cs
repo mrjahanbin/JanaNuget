@@ -254,7 +254,7 @@ namespace JanaPackTest.Converters.Numbers
             //assert
             Assert.Equal("", Act);
         }
-        
+
         [Theory]
         [InlineData(622.22, "kjhkjh")]
         [InlineData(622.22, "*&^*&^*&")]
@@ -277,7 +277,7 @@ namespace JanaPackTest.Converters.Numbers
             //assert
             Assert.Equal("", Act);
         }
-        
+
         [Theory]
         [InlineData(622.66, "kjhkjh")]
         [InlineData(622.66, "*&^*&^*&")]

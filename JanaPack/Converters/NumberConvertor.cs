@@ -15,7 +15,7 @@ namespace JanaPack.Converters
 
         public static string ToPercentString(this decimal value, bool? WithSeparator = true)
         {
-            
+
             var decimalResult = decimal.Round(value, 4, MidpointRounding.ToZero);
             string? Stringresult = "";
             if (WithSeparator.GetValueOrDefault())

@@ -306,7 +306,7 @@ namespace JanaPackTest.Converters.DateTimes
             Assert.Equal(Expected.Minute, Act.Minute);
             Assert.Equal(Expected.Second, Act.Second);
         }
-        
+
         [Fact]
         public void DateTimeValue_Correct12()
         {

@@ -1,5 +1,4 @@
 ﻿using JanaPack.Calculates;
-using JanaPack.Converters;
 
 namespace JanaPackTest.Converters.Numbers
 {
@@ -18,7 +17,7 @@ namespace JanaPackTest.Converters.Numbers
         public void Value_Correct(decimal Input, decimal Percentage)
         {
             //arrange
-            var Expected = (Input*Percentage)/100;
+            var Expected = (Input * Percentage) / 100;
 
             //act
             var Act = Input.Percentage(Percentage);

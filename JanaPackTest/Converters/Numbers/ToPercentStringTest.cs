@@ -34,7 +34,7 @@ namespace JanaPackTest.Converters.Numbers
             Assert.Equal("99,999,999,999.9999", Act);
 
         }
-        
+
         [Fact]
         public void Value_Correct6()
         {

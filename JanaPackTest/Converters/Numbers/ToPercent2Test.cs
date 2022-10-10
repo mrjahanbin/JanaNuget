@@ -24,7 +24,7 @@ namespace JanaPackTest.Converters.Numbers
             Assert.Equal(622, Act);
 
         }
-        
+
         [Theory]
         [InlineData(622.435465, 4)]
         public void Value_Correct_Rial2(decimal Input, int Format)
@@ -223,7 +223,7 @@ namespace JanaPackTest.Converters.Numbers
 
 
         [Theory]
-        [InlineData(622,9876876)]
+        [InlineData(622, 9876876)]
         public void Value_Not_Correct_Format(decimal Input, int Format)
         {
             //arrange
