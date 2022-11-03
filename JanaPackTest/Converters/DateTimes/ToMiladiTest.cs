@@ -1,5 +1,7 @@
 ﻿using JanaPack;
 using JanaPack.Converters;
+using System.Globalization;
+using Xunit;
 
 namespace JanaPackTest.Converters.DateTimes
 {
@@ -498,6 +500,95 @@ namespace JanaPackTest.Converters.DateTimes
             Assert.NotEqual("", Act);
             Assert.NotEqual(Expected, Act);
         }
+        #endregion
+
+
+        #region ToMiladiDateTime?
+        [Theory]
+        [InlineData(622, 3, 22)]
+        public void ToMiladiDateTime_Value_Correct(int Year, int Month, int Day)
+        {
+            //arrange
+            DateTime? Input = new DateTime(Year, Month, Day, new GregorianCalendar());
+            DateTime Expected = new(622, 3, 22, 12, 0, 0);
+
+            //act
+            var Act = Input.GetValueOrDefault().ToMiladiDateTime();
+
+            //assert
+            Assert.Equal(Expected, Act);
+
+        }
+
+        [Theory]
+        [InlineData(1401, 8, 12)]
+        public void ToMiladiDateTime_Value_Correct2(int Year, int Month, int Day)
+        {
+            //arrange
+            DateTime? Input = new DateTime(Year, Month, Day);
+            DateTime Expected = new(2022, 11, 03, 0, 0, 0);
+            //act
+            var Act = Input.GetValueOrDefault().ToMiladiDateTime();
+
+            //assert
+            Assert.NotEqual(Expected, Act);
+            Assert.NotEqual(Expected, Act);
+
+        }
+
+        [Theory]
+        [InlineData(1, 1, 1)]
+        public void ToMiladiDateTime_Value_Not_Correct(int Year, int Month, int Day)
+        {
+            //arrange
+            DateTime? Input = new DateTime(Year, Month, Day);
+            DateTime Expected = new(1, 1, 1, 1, 1, 1);
+            //act
+            var Act = Input.GetValueOrDefault().ToMiladiDateTime();
+
+            //assert
+            Assert.Equal(Expected, Act);
+
+        }
+
+        [Theory]
+        [InlineData(1, 1, 1)]
+        [InlineData(1111, 1, 1)]
+        [InlineData(1111, 11, 11)]
+        public void ToMiladiDateTime_Value_Not_Correct2(int Year, int Month, int Day)
+        {
+            Assert.False(Year == 0);
+            Assert.False(Year > 9999);
+            Assert.False(Year < 1);
+
+            Assert.False(Month == 0);
+            Assert.False(Month > 99);
+            Assert.False(Month < 1);
+
+            Assert.False(Day == 0);
+            Assert.False(Day > 99);
+            Assert.False(Day < 1);
+
+        }
+
+
+
+        [Fact]
+        public void ToMiladiDateTime_Value_Null()
+        {
+            //arrange
+            DateTime? Input = null;
+            DateTime Expected = new(1, 1, 1, 1, 1, 1);
+            //act
+            var Act = Input.GetValueOrDefault().ToMiladiDateTime();
+
+            //assert
+            Assert.Equal(Expected, Act);
+        }
+
+
+
+
         #endregion
     }
 }

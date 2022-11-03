@@ -25,6 +25,38 @@ namespace JanaPackTest.Converters.DateTimes
         }
 
         [Theory]
+        [InlineData("1/1/0001 12:00:00 AM")]
+        [InlineData("1/1/0001 00:00:00 AM")]
+        [InlineData("1/1/0001 00:00:00")]
+        public void Shamsi_Value_Correct8(string value)
+        {
+            //arrange
+            DateTime? Input = DateTime.Parse(value);
+
+            //act
+            var Act = Input.GetValueOrDefault().ToShamsi();
+
+            //assert
+            Assert.Equal("1/01/01", Act);
+
+        }
+
+        [Theory]
+        [InlineData("0001-01-01T00:00:00")]
+        public void Shamsi_Value_Correct88(string value)
+        {
+            //arrange
+            DateTime? Input = DateTime.Parse(value);
+
+            //act
+            var Act = Input.GetValueOrDefault().ToShamsi();
+
+            //assert
+            Assert.Equal("", Act);
+
+        }
+
+        [Theory]
         [InlineData(623, 3, 22)]
         [InlineData(2022, 5, 12)]
         [InlineData(2021, 03, 20)]

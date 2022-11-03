@@ -9,6 +9,25 @@ namespace JanaPack.Converters
     public static class DateTimeConvertor
     {
 
+        public static string ToPersianCulture(this string date)
+        {
+            var Days = (DateTime.Parse(date) - DateTime.Parse(DateTime.Now.ToShortDateString())).Days;
+
+            var Week = Days / 7;
+            var DaysOfWeek = Days % 7;
+            return $"{date}-{DateTime.Parse(date).ToShamsi()} ({Days} روز دیگر برابر {Week} هفته و {DaysOfWeek} روز )";
+        }
+
+        public static string ToPersianCulture(this DateTime date)
+        {
+
+            var Days = (date - DateTime.Parse(DateTime.Now.ToShortDateString())).Days;
+
+            var Week = Days / 7;
+            var DaysOfWeek = Days % 7;
+            return $"{date}-{date.ToShamsi()} ({Days} روز دیگر برابر {Week} هفته و {DaysOfWeek} روز )";
+        }
+
         #region Miladi
 
         public static DateTime ToMiladiDate(this string value)
@@ -106,6 +125,10 @@ namespace JanaPack.Converters
                 }
                 string ConvertPersianNumberToEng = Regex.Replace(Time, "[۰-۹]", x => ((char)(x.Value[0] - '۰' + '0')).ToString());
                 ConvertPersianNumberToEng = ConvertPersianNumberToEng.Replace("AM", "").Replace("PM", "");
+                ConvertPersianNumberToEng = ConvertPersianNumberToEng.Replace("ق.ظ", "").Replace("ب.ظ", "");
+                ConvertPersianNumberToEng = ConvertPersianNumberToEng.Replace("T", " ");
+                ConvertPersianNumberToEng = ConvertPersianNumberToEng.Replace("-", ":");
+                ConvertPersianNumberToEng = ConvertPersianNumberToEng.Replace("/", ":");
 
                 TimeOnly = ConvertPersianNumberToEng.Split(new[] { ':', ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(d => int.Parse(d)).ToList();
                 if (TimeOnly.Count == 2)
@@ -142,7 +165,12 @@ namespace JanaPack.Converters
             return Result;
 
         }
+        public static DateTime? ToMiladiDateTime(this DateTime value)
+        {
+            var date = value.ToString().ToMiladiDateTime();
+            return date;
 
+        }
 
         public static string ToMiladiYear(this string value)
         {
@@ -219,8 +247,6 @@ namespace JanaPack.Converters
 
             return $"{pc.GetYear(value)}/{pc.GetMonth(value):00}/{pc.GetDayOfMonth(value):00} {pc.GetHour(value)}:{pc.GetMinute(value)}:{pc.GetSecond(value)}";
         }
-
-
 
         public static string ToShamsiYear(this DateTime value)
         {
