@@ -54,6 +54,13 @@ namespace JanaPack.Converters
             {
                 return new();
             }
+            if (datePart[2] > 99)
+            {
+                int Year = datePart[2];
+                int Day = datePart[0];
+                datePart[0] = Year;
+                datePart[2] = Day;
+            }
 
 
             var Result = new DateTime(datePart[0], datePart[1], datePart[2], pc);

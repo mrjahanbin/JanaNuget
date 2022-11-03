@@ -46,10 +46,19 @@ namespace JanaPackTest.Converters.Numbers
 
             //act
             var Act = Input.ToPercent();
+            var ActString = Act.ToString();
 
             //assert
             Assert.NotEqual(0, Act);
-            Assert.Contains(".", Act.ToString());
+            if (ActString.Contains("/"))
+            {
+                Assert.Contains("/", Act.ToString());
+            }
+            if (ActString.Contains("."))
+            {
+                Assert.Contains(".", Act.ToString());
+            }
+
 
         }
         [Theory]

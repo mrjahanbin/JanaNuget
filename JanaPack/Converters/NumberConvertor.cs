@@ -104,6 +104,37 @@ namespace JanaPack.Converters
                     //}
 
                 }
+                else if (value.ToString().Contains('/'))
+                {
+                    var FormatSplit = Format.Split(".");
+                    int Pointcount = 0;
+                    if (FormatSplit.Length > 1)
+                    {
+                        Pointcount = FormatSplit[1].Length;
+                    }
+
+                    var decimalResult = decimal.Round(value, Pointcount, MidpointRounding.ToZero);
+
+
+
+                    //نمیدونم چطوری کار میکنه اما جواب میده!!
+                    //int count = BitConverter.GetBytes(decimal.GetBits(decimalResult)[3])[2];
+                    var PointFormat = "";
+                    for (int i = 0; i < Pointcount; i++)
+                    {
+                        PointFormat += "#";
+                    }
+
+                    result = Convert.ToDecimal(decimalResult).ToString($"{FormatSplit[0]}.{PointFormat}", CultureInfo.InvariantCulture);
+
+                    //var resultSplit = result.Split(".");
+                    //result = $"{resultSplit[0]}.{resultSplit[1].Remove(Pointcount)}";
+                    //if (result.EndsWith("."))
+                    //{
+                    //    result = result.Replace(".", "");
+                    //}
+
+                }
                 else
                 {
                     result = Convert.ToDecimal(value).ToString(Format, CultureInfo.InvariantCulture);
@@ -121,6 +152,10 @@ namespace JanaPack.Converters
                     return "";
                 }
                 if (result.StartsWith("."))
+                {
+                    result = "0" + result;
+                }
+                if (result.StartsWith("/"))
                 {
                     result = "0" + result;
                 }
