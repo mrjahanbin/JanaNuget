@@ -218,6 +218,23 @@ namespace JanaPackTest.Converters.DateTimes
             Assert.Equal(Expected.Minute, Act.Minute);
             Assert.Equal(Expected.Second, Act.Second);
         }
+        
+        [Theory]
+        [InlineData("8/14/1401 12:00:00 AM")]
+        public void DateTimeValue_CorrectN(string Input)
+        {
+            //arrange
+            DateTime Expected = new(2022, 11, 05, 12, 0, 0);
+
+            //act
+            var Act = Input.ToMiladiDateTime();
+
+            //assert
+            Assert.Equal(Expected.Date, Act.Date);
+            Assert.Equal(Expected.Hour, Act.Hour);
+            Assert.Equal(Expected.Minute, Act.Minute);
+            Assert.Equal(Expected.Second, Act.Second);
+        }
         [Theory]
         [InlineData("12/08/1401 00:00:00 ق.ظ")]
         [InlineData("12/08/1401 00:00:00 ب.ظ")]

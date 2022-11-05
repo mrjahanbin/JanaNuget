@@ -69,16 +69,26 @@ namespace JanaPack.Converters
 
             PersianCalendar pc = new();
 
-            if (datePart[0] > 9999 || datePart[1] > 12 || datePart[1] > 31)
-            {
-                return new();
-            }
             if (datePart[2] > 99)
             {
                 int Year = datePart[2];
                 int Day = datePart[0];
+                int Month = datePart[1];
+                if (datePart[1] > 12)
+                {
+                    Day = datePart[1];
+                    Month = datePart[0];
+                }
+
+
                 datePart[0] = Year;
                 datePart[2] = Day;
+                datePart[1] = Month;
+
+            }
+            if (datePart[0] > 9999 || datePart[1] > 12 || datePart[1] > 31)
+            {
+                return new();
             }
 
 
