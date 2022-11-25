@@ -163,6 +163,7 @@ namespace JanaPackTest.Converters.DateTimes
         [InlineData("1368/9/11 08:37:15 AM")]
         [InlineData("1368-09-11 08:37:15 AM")]
         [InlineData("1368-9-11 08:37:15 AM")]
+
         public void DateTimeValue_Correct8(string Input)
         {
             //arrange
@@ -204,10 +205,11 @@ namespace JanaPackTest.Converters.DateTimes
         [Theory]
         [InlineData("12/08/1401 12:00:00 ق.ظ")]
         [InlineData("12/08/1401 12:00:00 ب.ظ")]
+
         public void DateTimeValue_Correct1(string Input)
         {
             //arrange
-            DateTime Expected = new(2022, 11, 03, 12, 0, 0);
+            DateTime Expected = new(2023, 02, 27, 12, 0, 0);
 
             //act
             var Act = Input.ToMiladiDateTime();
@@ -218,7 +220,7 @@ namespace JanaPackTest.Converters.DateTimes
             Assert.Equal(Expected.Minute, Act.Minute);
             Assert.Equal(Expected.Second, Act.Second);
         }
-        
+
         [Theory]
         [InlineData("8/14/1401 12:00:00 AM")]
         public void DateTimeValue_CorrectN(string Input)
@@ -235,13 +237,33 @@ namespace JanaPackTest.Converters.DateTimes
             Assert.Equal(Expected.Minute, Act.Minute);
             Assert.Equal(Expected.Second, Act.Second);
         }
+
+
+        [Theory]
+        [InlineData("9/5/1401 12:00:00 AM")]
+        public void DateTimeValue_CorrectN2(string Input)
+        {
+            //arrange
+            DateTime Expected = new(2022, 11, 26, 12, 0, 0);
+
+            //act
+            var Act = Input.ToMiladiDateTime();
+
+            //assert
+            Assert.Equal(Expected.Date, Act.Date);
+            Assert.Equal(Expected.Hour, Act.Hour);
+            Assert.Equal(Expected.Minute, Act.Minute);
+            Assert.Equal(Expected.Second, Act.Second);
+        }
+
         [Theory]
         [InlineData("12/08/1401 00:00:00 ق.ظ")]
         [InlineData("12/08/1401 00:00:00 ب.ظ")]
         public void DateTimeValue_Correct22(string Input)
         {
             //arrange
-            DateTime Expected = new(2022, 11, 03, 00, 0, 0);
+            DateTime Expected = new(2023, 02, 27, 00, 0, 0);
+
 
             //act
             var Act = Input.ToMiladiDateTime();
@@ -527,10 +549,10 @@ namespace JanaPackTest.Converters.DateTimes
         {
             //arrange
             DateTime? Input = new DateTime(Year, Month, Day, new GregorianCalendar());
-            DateTime Expected = new(622, 3, 22, 12, 0, 0);
+            DateTime Expected = new(1243, 6, 12, 12, 0, 0);
 
             //act
-            var Act = Input.GetValueOrDefault().ToMiladiDateTime();
+            var Act = Input.ToMiladiDateTime();
 
             //assert
             Assert.Equal(Expected, Act);
@@ -545,7 +567,7 @@ namespace JanaPackTest.Converters.DateTimes
             DateTime? Input = new DateTime(Year, Month, Day);
             DateTime Expected = new(2022, 11, 03, 0, 0, 0);
             //act
-            var Act = Input.GetValueOrDefault().ToMiladiDateTime();
+            var Act = Input.ToMiladiDateTime();
 
             //assert
             Assert.NotEqual(Expected, Act);
@@ -559,9 +581,9 @@ namespace JanaPackTest.Converters.DateTimes
         {
             //arrange
             DateTime? Input = new DateTime(Year, Month, Day);
-            DateTime Expected = new(1, 1, 1, 1, 1, 1);
+            DateTime Expected = new(0622, 3, 22, 12, 0, 0);
             //act
-            var Act = Input.GetValueOrDefault().ToMiladiDateTime();
+            var Act = Input.ToMiladiDateTime();
 
             //assert
             Assert.Equal(Expected, Act);
@@ -595,9 +617,22 @@ namespace JanaPackTest.Converters.DateTimes
         {
             //arrange
             DateTime? Input = null;
-            DateTime Expected = new(1, 1, 1, 1, 1, 1);
+            DateTime? Expected = null;
             //act
-            var Act = Input.GetValueOrDefault().ToMiladiDateTime();
+            var Act = Input.ToMiladiDateTime();
+
+            //assert
+            Assert.Equal(Expected, Act);
+        }
+
+        [Fact]
+        public void ToMiladiDateTime_Value_Null2()
+        {
+            //arrange
+            DateTime? Input = null;
+            DateTime? Expected = new DateTime();
+            //act
+            var Act = Input.ToMiladiDateTime().GetValueOrDefault();
 
             //assert
             Assert.Equal(Expected, Act);

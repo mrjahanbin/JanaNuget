@@ -37,7 +37,7 @@ namespace JanaPackTest.Converters.DateTimes
             var Act = Input.GetValueOrDefault().ToShamsi();
 
             //assert
-            Assert.Equal("1/01/01", Act);
+            Assert.Equal("", Act);
 
         }
 

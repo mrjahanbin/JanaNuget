@@ -5,7 +5,7 @@
 		<ImplicitUsings>disable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<VersionPrefix>0.0.14</VersionPrefix>
+		<VersionPrefix>0.0.15</VersionPrefix>
 		<PackageProjectUrl>https://github.com/mrjahanbin/JanaNuget.git</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/mrjahanbin/JanaNuget.git</RepositoryUrl>
 		<PackageTags>JanaPack,Mrjahanbin,StringFixer,PersianDateToMiladi,MiladiToPersianDate</PackageTags>
@@ -14,7 +14,7 @@
 		<Copyright>MrJahanbin</Copyright>
 		<RepositoryType>git</RepositoryType>
 		<PackageReleaseNotes>
-			Support .Net7
+			Fixed ToMiladi
 		</PackageReleaseNotes>
 		<Description>Library of important functions</Description>
 		<PackageIcon>icon.png</PackageIcon>
