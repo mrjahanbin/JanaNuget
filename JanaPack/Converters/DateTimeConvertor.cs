@@ -211,12 +211,12 @@ namespace JanaPack.Converters
             if (datePart[2] > 99)
             {
                 int Year = datePart[2];
-                int Day = datePart[0];
-                int Month = datePart[1];
-                if (datePart[1] > 12)
+                int Day = datePart[1];
+                int Month = datePart[0];
+                if (datePart[0] > 12)
                 {
-                    Day = datePart[1];
-                    Month = datePart[0];
+                    Day = datePart[0];
+                    Month = datePart[1];
                 }
 
 
@@ -313,8 +313,12 @@ namespace JanaPack.Converters
             return Result;
 
         }
-        public static DateTime? ToMiladiDateTime(this DateTime value)
+        public static DateTime? ToMiladiDateTime(this DateTime? value)
         {
+            if (value == null)
+            {
+                return null;
+            }
             var date = value.ToString().ToMiladiDateTime();
             return date;
 
