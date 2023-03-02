@@ -11,6 +11,7 @@
 		<PackageTags>JanaPack,Mrjahanbin,StringFixer,PersianDateToMiladi,MiladiToPersianDate</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Title>Jana Pack</Title>
+		<Authors>MrJahanbin</Authors>
 		<Copyright>MrJahanbin</Copyright>
 		<RepositoryType>git</RepositoryType>
 		<PackageReleaseNotes>
